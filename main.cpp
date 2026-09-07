@@ -3,14 +3,18 @@
 
 
 int main(){
-    int screenWidth{1280};
-    int screenHeight{800};
-    InitWindow(screenWidth, screenHeight, "Hello world");
+    const char* title{"Snake"};
+    const int screenWidth{900};
+    const int screenHeight{900};
+    InitWindow(screenWidth, screenHeight, title);
+
+    SetTargetFPS(60);
     
     while(WindowShouldClose() == false){
-        BeginDrawing();
         
-
+        BeginDrawing();
+        ClearBackground(WHITE);
+        
         EndDrawing();
     }
 
